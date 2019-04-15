@@ -34,8 +34,11 @@ jobs:
     - checkout
     - *restore_gradle_cache
     - run:
+        name: Run lint
+        command: ./gradlew :library:lint
+    - run:
         name: Build library
-        command: ./gradlew :library:build
+        command: ./gradlew :library:assemble
     - run:
         name: Run library tests
         command: ./gradlew :library:test
