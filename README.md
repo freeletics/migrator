@@ -76,7 +76,7 @@ Next you have to setup the `Migrator` instance
 ```kotlin
 val migrator = Migrator( context, V1Migration(), V2Migration() )
 
-migrator.runMigrationsIfNeeded() // Actually runs the migration. You may want to do that on a background thread.
+migrator.runMigrationsIfNeeded() // Actually runs the migrations
 ```
 
 ### Threading
