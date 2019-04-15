@@ -66,7 +66,7 @@ Please note that you as a developer have to take care about doing proper error h
 previous changes done within a `Migration.run()` call.
 In other words, it's your responsibility to make things transactional.
 Migrator doesn't provide any Atomicity, Consistency, Isolation or Durability (ACID) guarantees.
-THe only guarantee you get is that all Migrations run squentially (one after each other, sorted by `Migration.version`)
+The only guarantee you get is that all Migrations run squentially (one after each other, sorted by `Migration.version`)
 and if one migration succeeded Migrator wont run this migration again.
 If you don't want to a migration to succeed, just throw an exception.
 In that case (unless exception is caught somewhere) the app will crash.
@@ -102,5 +102,6 @@ suspend fun runMigrationInBackground(){
 }
 ```
 
-In a nutshell, all that migrator does is run `Migrations` one after each other and guarantees that if one `Migration`
+In a nutshell, all that `Migrator` does is run `Migrations` one after each other and guarantees that if one `Migration`
 completed it wont execute a `Migration` again next time you call `migrator.runMigrationsIfNeeded()`.
+Nothing more, nothing less.
