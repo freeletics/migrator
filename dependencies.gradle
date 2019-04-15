@@ -1,0 +1,35 @@
+ext.versions = [
+        agp         : '3.3.2',
+        compileSdk  : 28,
+        targetSdk   : 28,
+        minSdk      : 14,
+
+        mavenPublish: '0.8.0',
+        dokka       : '0.9.18',
+        kotlin      : '1.3.30',
+
+        junit       : '4.12',
+        kotlinTest  : '3.3.0',
+        testRunner  : '1.0.2',
+        espresso    : '3.0.2'
+]
+
+ext.libraries = [
+        kotlinStdlib: "org.jetbrains.kotlin:kotlin-stdlib:$versions.kotlin",
+]
+
+ext.testLibraries = [
+        junit     : "junit:junit:$versions.junit",
+        testRunner: "com.android.support.test:runner:$versions.testRunner",
+        testRules : "com.android.support.test:rules:$versions.testRunner",
+        kotlinTest: "io.kotlintest:kotlintest-runner-junit5:$versions.kotlinTest",
+        espresso  : "com.android.support.test.espresso:espresso-core:$versions.espresso"
+
+]
+
+ext.gradlePlugins = [
+        android     : "com.android.tools.build:gradle:$versions.agp",
+        kotlin      : "org.jetbrains.kotlin:kotlin-gradle-plugin:$versions.kotlin",
+        mavenPublish: "com.vanniktech:gradle-maven-publish-plugin:$versions.mavenPublish",
+        dokka       : "org.jetbrains.dokka:dokka-gradle-plugin:$versions.dokka",
+]
