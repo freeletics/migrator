@@ -23,7 +23,7 @@ class SharedPrefsMigratorVersionStore(context: Context) : MigratorVersionStore {
 
     override fun setMigratedUntilVersion(version: Int) {
         if (version <= 0) {
-            throw IllegalArgumentException("Version must be > 1")
+            throw IllegalArgumentException("Version must be >= 1")
         }
         sharedPrefs.edit().putInt(KEY_LAST_VERSION, version).apply()
     }

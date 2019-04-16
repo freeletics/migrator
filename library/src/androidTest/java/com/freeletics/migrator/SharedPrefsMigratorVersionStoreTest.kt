@@ -49,14 +49,14 @@ class SharedPrefsMigratorVersionStoreTest {
             versionStore.setMigratedUntilVersion(0)
             Assert.fail("IllegalArgumentException expected")
         } catch (t: IllegalArgumentException) {
-            Assert.assertEquals("Version must be > 1", t.message)
+            Assert.assertEquals("Version must be >= 1", t.message)
         }
 
         try {
             versionStore.setMigratedUntilVersion(-1)
             Assert.fail("IllegalArgumentException expected")
         } catch (t: IllegalArgumentException) {
-            Assert.assertEquals("Version must be > 1", t.message)
+            Assert.assertEquals("Version must be >= 1", t.message)
         }
     }
 }
