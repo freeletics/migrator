@@ -22,7 +22,7 @@ allprojects {
 
 
 ```
-implementation 'com.freeletics.rxredux:rxredux:1.0.0-SNAPSHOT'
+implementation 'com.freeletics.migrator:migrator:1.0.0-SNAPSHOT'
 
 ```
 
