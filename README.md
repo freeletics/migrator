@@ -4,7 +4,12 @@ Migrator is a general purpose migration library for Android.
 
 ## Dependency
 
-Latest snapshot (directly published from master branch from Circle CI):
+```
+implementation 'com.freeletics.migrator:migrator:1.0.0'
+
+```
+
+Latest snapshot (directly published from master branch):
 
 ```
 allprojects {
@@ -22,7 +27,7 @@ allprojects {
 
 
 ```
-implementation 'com.freeletics.migrator:migrator:1.0.0-SNAPSHOT'
+implementation 'com.freeletics.migrator:migrator:1.0.1-SNAPSHOT'
 
 ```
 
